@@ -9,16 +9,14 @@ import org.junit.runner.RunWith;
 
 import com.systematicmethods.apex.structure.ApexGraph;
 
-//XXXStructureStandardTest
 //Structure API tests
 @RunWith(StructureStandardSuite.class)
 @GraphProviderClass(provider = ApexGraphProvider.class, graph = ApexGraph.class)
-
 public class ApexStructureTest {
 
-  @Test
-  public void test() {
-    fail("Not yet implemented");
-  }
+//  @Test
+//  public void test() {
+//    fail("Not yet implemented");
+//  }
 
 }

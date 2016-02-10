@@ -5,7 +5,9 @@ import org.apache.tinkerpop.gremlin.process.computer.GraphComputer
 import org.apache.tinkerpop.gremlin.structure.{ Edge, Graph, Transaction, Vertex }
 import org.apache.tinkerpop.gremlin.structure.util.StringFactory
 import org.apache.tinkerpop.gremlin.structure.Graph.Features
+import org.apache.tinkerpop.gremlin.structure.util.GraphFactoryClass
 
+@GraphFactoryClass(classOf[ApexGraphFactory])
 @Graph.OptIn(Graph.OptIn.SUITE_STRUCTURE_STANDARD)
 class ApexGraph(configuration: Configuration) extends Graph {
 
@@ -27,8 +29,4 @@ class ApexGraph(configuration: Configuration) extends Graph {
   }
 }
 
-object ApexGraph {
-  def open(configuration: Configuration): ApexGraph = {
-    new ApexGraph(configuration);
-  }
-}
+
