@@ -6,12 +6,12 @@ import org.apache.tinkerpop.gremlin.structure.Graph
 import org.apache.tinkerpop.gremlin.structure.util.StringFactory
 import org.apache.tinkerpop.gremlin.structure.util.ElementHelper
 
-abstract class ApexElement(id: Object, label: String, graph: Graph) extends Element {
+abstract class ApexElement(id: Object, label: Option[String], graph: Graph) extends Element {
 
   // Members declared in Element
   override def graph(): Graph = graph
   override def id(): Object = id
-  override def label(): String = label
+  override def label(): String = label.getOrElse(null)
 
   def removeProperty(key: String): Unit
 

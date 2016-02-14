@@ -9,7 +9,7 @@ import org.apache.tinkerpop.gremlin.structure.VertexProperty.Cardinality
 import org.apache.tinkerpop.gremlin.structure.Property
 import org.apache.tinkerpop.gremlin.structure.util.StringFactory
 
-class ApexVertex(id: Object, label: String, graph: Graph) extends ApexElement(id, label, graph) with Vertex {
+class ApexVertex(id: Object, label: Option[String], graph: Graph) extends ApexElement(id, label, graph) with Vertex {
   
   // Members declared in Vertex
   override def addEdge(label: String, inVertex: Vertex, keyValues: Object*): Edge = ???

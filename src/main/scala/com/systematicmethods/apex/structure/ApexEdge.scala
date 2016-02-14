@@ -7,7 +7,7 @@ import org.apache.tinkerpop.gremlin.structure.Vertex
 import org.apache.tinkerpop.gremlin.structure.Direction
 import org.apache.tinkerpop.gremlin.structure.util.StringFactory
 
-class ApexEdge(id: Object, label: String, graph: Graph) extends ApexElement(id, label, graph) with Edge {
+class ApexEdge(id: Object, label: Option[String], graph: Graph) extends ApexElement(id, label, graph) with Edge {
 
   // Members declared in Edge
   override def properties[V](propertyKeys: String*): java.util.Iterator[Property[V]] = ???
