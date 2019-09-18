@@ -24,3 +24,7 @@ project/plugins/project/
 .project
 .settings
 /bin/
+
+.gradle
+build
+

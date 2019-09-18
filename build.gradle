@@ -1,0 +1,24 @@
+
+//apply plugin: 'java'
+apply plugin: 'scala'
+apply plugin: 'eclipse'
+
+
+version = '0.0.1'
+group = 'com.systematicmethods'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.11.7'
+    compile 'org.apache.tinkerpop:gremlin-core:3.1.0-incubating'
+    compile 'ch.qos.logback:logback-classic:1.1.5'
+    
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    testCompile group: 'org.apache.tinkerpop', name: 'gremlin-test', version: '3.1.0-incubating'
+    testCompile group: 'org.apache.tinkerpop', name: 'tinkergraph-gremlin', version: '3.1.0-incubating'
+}
+
